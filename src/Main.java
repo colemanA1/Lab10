@@ -30,11 +30,15 @@ public class Main {
             String yesNo = Validator.getString(scan, "Would you like to purchase this automobile, sir/ma'am?(y/n)");
             buyOrNah = yesNo.equalsIgnoreCase("y");
             if (buyOrNah) {
-                carList.remove(makeSelection);
+                carList.remove(makeSelection-1);
                 System.out.println("Excellent Selection Sir/Ma'am");
+                for(Car C: carList){
+                    System.out.println(C);
+                }
             } else {
                 System.out.println("Another Day Perhaps!");
             }
         } while (!buyOrNah);
+
     }
 }
