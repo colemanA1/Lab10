@@ -6,22 +6,21 @@ public class Main {
     static boolean buyOrNah = true;
 
     public static int userChoice() {
-        int input = Validator.getInt(scan, "Please make a selection from our dealership...",1, carList.size());
+        int input = Validator.getInt(scan, "Please make a selection from our dealership...", 1, carList.size());
         return input;
     }
-
 
     public static void main(String[] args) {
         System.out.println("WELCOME TO THE GRAND CIRCUS CAR LOT!");
         System.out.println();
-        System.out.printf("%-4s %-13s %-12s %-12s %-13s %-6s %-2s","Num","Model","Make","Year","Price","N/U","Mileage\n");
+        System.out.printf("%-4s %-13s %-12s %-12s %-13s %-6s %-2s", "Num", "Model", "Make", "Year", "Price", "N/U", "Mileage\n");
         System.out.println("------------------------------------------------------------------------------");
-        carList.add(new Car(1,"Lamborghini", "Reventon", 2010, 2500000));
-        carList.add(new Car(2,"Mercedes", "Maybach", 2017, 500000));
-        carList.add(new Car(3,"Aston Martin", "DB10", 2011, 1500000));
-        carList.add(new UsedCar(4,"Ford", "Pinto", 1978,2000, "(Used)",300000));
-        carList.add(new UsedCar(5,"Mazda", "Miata", 1994, 800, "(Used)", 280000));
-        carList.add(new UsedCar(6,"Geo/Chevy", "Metro", 1995, 500, "(Used)", 300000));
+        carList.add(new Car(1, "Lamborghini", "Reventon", 2010, 2500000));
+        carList.add(new Car(2, "Mercedes", "Maybach", 2017, 500000));
+        carList.add(new Car(3, "Aston Martin", "DB10", 2011, 1500000));
+        carList.add(new UsedCar(4, "Ford", "Pinto", 1978, 2000, "(Used)", 300000));
+        carList.add(new UsedCar(5, "Mazda", "Miata", 1994, 800, "(Used)", 280000));
+        carList.add(new UsedCar(6, "Geo/Chevy", "Metro", 1995, 500, "(Used)", 300000));
         for (Car C : carList) {
             System.out.println(C);
         }
@@ -36,8 +35,6 @@ public class Main {
             } else {
                 System.out.println("Another Day Perhaps!");
             }
-        }   while (!buyOrNah) ;
-
-        //carList.get(3).getMileage();
+        } while (!buyOrNah);
     }
 }
