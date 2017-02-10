@@ -1,6 +1,5 @@
 public class Car {
     //Main cannot see these variables.
-    public int carNum;
     public String make;
     public String model;
     public int year;
@@ -9,16 +8,6 @@ public class Car {
 
     //Command N or right click and select generate, select all variables, constructor for method in the bottom method.
 //Command N getter/setter makes the getter/setter right below.
-    public int getcarNum(){
-        return carNum;
-    }
-    public void setcarNum(int carNum){
-        this.carNum = carNum;
-    }
-
-    public void setCarNum(int carNum) {
-        this.carNum = carNum;
-    }
 
     public String getMake() {
         return make;
@@ -60,17 +49,15 @@ public class Car {
      */
     @Override
     public String toString(){
-        return String.format("%-4d %-13s %-12s %-12s $%-12.2f", carNum, make, model, year, price);
+        return String.format("%-13s %-12s %-12s $%-12.2f", make, model, year, price);
     }
     public Car() {
-        this.carNum = 0;
         this.make = "";
         this.model = "";
         this.year = 0;
         this.price = 0;
     }
-    public Car(int carNum, String make, String model, int year, double price) {
-        this.carNum = carNum;
+    public Car(String make, String model, int year, double price){
         this.make = make;
         this.model = model;
         this.year = year;
