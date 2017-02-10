@@ -20,7 +20,7 @@ public class UsedCar extends Car {
 
     @Override
     public String toString() {
-        return String.format("%-13s %-12s %-12s $%-12.2f %-2s %-2s", make, model, year, price, Used, Mileage);
+        return String.format("%-13s %-12s %-12s $%-12.2f %-2s %-5s", make, model, year, price, Used, Mileage);
 
         }
 

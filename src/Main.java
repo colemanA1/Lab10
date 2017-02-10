@@ -16,7 +16,7 @@ public class Main {
         String yesNo = "";
         System.out.println("WELCOME TO THE GRAND CIRCUS CAR LOT!");
         System.out.println();
-        System.out.printf("%-4s %-13s %-12s %-12s %-13s %-6s %-2s", "Num", "Model", "Make", "Year", "Price", "N/U", "Mileage\n");
+        System.out.printf("%-2s %-12s %-12s %-12s %-13s %-6s %-2s", "Num", "Model", "Make", "Year", "Price", "N/U", "Mileage\n");
         System.out.println("------------------------------------------------------------------------------");
         carList.add(new Car("Lamborghini", "Reventon", 2010, 2500000));
         carList.add(new Car("Mercedes", "Maybach", 2017, 500000));
